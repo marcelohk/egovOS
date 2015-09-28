@@ -5,7 +5,7 @@
 // the 2nd parameter is an array of 'requires'
 // 'ionicParseApp.controllers' is found in controllers.js
 angular.module('ionicParseApp',
-        [ 'ionic', 'ionicParseApp.controllers' ]
+        [ 'ionic', 'ionicParseApp.controllers' ,'ionicParseApp.services']
     )
     .config(function($stateProvider, $urlRouterProvider) {
 
@@ -67,7 +67,42 @@ angular.module('ionicParseApp',
                         controller: 'RegisterController'
                     }
                 }
-            });
+            })
+        
+        .state('app.todos', {
+                url: '/todos',
+                views: {
+                    'menuContent': {
+                        templateUrl: 'templates/edit/todos.html',
+                        controller: 'TodoListController'
+                    }
+                }
+            })
+        
+        .state('app.createTodo', {
+                url: '/todo/new',
+                views: {
+                    'menuContent': {
+                        templateUrl: 'templates/edit/create-todo.html',
+                        controller: 'TodoCreationController'
+                    }
+                }
+            })
+        
+        .state('app.editTodo', {
+                url: '/todo/edit/:id/:content',
+                views: {
+                    'menuContent': {
+                        templateUrl: 'templates/edit/edit-todo.html',
+                        controller: 'TodoEditController'
+                    }
+                }
+            })
+        
+        
+        
+        
+        ;
 
         $urlRouterProvider.otherwise('/welcome');
     })

@@ -2,6 +2,7 @@
     "jscodehints.detectedExclusions": [
         "C:/Users/marcelo/Documents/egovOS/gulpfile.js",
         "C:/Users/marcelo/Documents/egovOS/plugins/cordova-plugin-whitelist/whitelist.js",
-        "C:/Users/marcelo/Documents/egovOS/platforms/android/assets/www/lib/ionic/js/angular/angular-resource.js"
+        "C:/Users/marcelo/Documents/egovOS/platforms/android/assets/www/lib/ionic/js/angular/angular-resource.js",
+        "C:/Users/marcelo/Documents/egovOS/www/lib/parse/parse.min.js"
     ]
 }
